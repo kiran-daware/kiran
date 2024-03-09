@@ -1,0 +1,115 @@
+:root {
+  --pri-color: #ea755e;
+  --pri-color-d: #e24121;
+  --sec-color: #1c2540;
+  --sec-color-d: #070910;
+
+  --fresh-color-1: #fafafa;
+  --fresh-color-2: #f2f5ff;
+  --fresh-color-3: #fff6f4;
+
+  --shadow-color:#6f6f6fa1;
+}
+
+section {
+  margin-top: 50px;
+  padding: 21px;
+  position: relative;
+  z-index: 2; /* above particles.js */
+  background-color: var(--fresh-color-2);
+  scroll-margin-top: 90px;
+  box-shadow: 1px 1px 4px var(--shadow-color);
+}
+
+.k-logo{font-size: 25px; color: var(--sec-color); text-decoration: none;}
+.k-logo:hover{color: var(--sec-color-d);}
+.k-shadow{text-shadow: 1px 1px 2px var(--shadow-color);}
+.k-bg-body{background-color: var(--fresh-color-1);}
+
+/* k-nav */
+.k-bg-nav{background-color: var(--fresh-color-2);}
+.nav-item{padding: 0.25rem 0.25rem;}
+.nav-link{color: var(--fresh-color-1);font-weight: 600;}
+.nav-link:hover, .nav-link:active{color: var(--fresh-color-1);}
+.navbar-toggler{background-color: var(--pri-color);}
+
+/* k-txt */
+.k-txt-light{color: var(--fresh-color-1);}
+.text-justify p {text-align: justify;}
+
+/* k-social-icon */
+.k-social-icon i {
+  font-size: 1.625rem;
+  transition: 0.2s linear;}
+
+/* k-buttons */
+.k-btn-pri {
+  color: var(--fresh-color-1);
+  background-color: var(--pri-color);
+  border-color: var(--pri-color);
+  box-shadow: none;
+}
+.k-btn-pri:hover, .btn.k-btn-pri:active {
+  background-color: var(--pri-color-d);
+  border-color: var(--pri-color-d);
+  color: var(--fresh-color-1);
+}
+
+.k-btn-sec {
+  color: var(--fresh-color-1);
+  background-color: var(--sec-color);
+  border-color: var(--sec-color);
+  box-shadow: none;
+}
+.k-btn-sec:hover, .btn.k-btn-sec:active {
+  background-color: var(--sec-color-d);
+  border-color: var(--sec-color-d);
+  color: var(--fresh-color-1);
+}
+
+.k-btn-outline-pri {
+  color: var(--pri-color);
+  border-color: var(--pri-color);
+}
+.k-btn-outline-pri:hover{
+  background-color: var(--pri-color);
+  color: var(--fresh-color-1);
+  border-color: var(--pri-color-d);
+}
+
+/* My Works section */
+#myworks {background-color: var(--fresh-color-3);}
+.k-img-myworks {
+    max-width: 100%; /* Set the maximum width of the image */
+    max-height: 100%; /* Set the maximum height of the image */
+    width: auto; /* Allow the image to adjust its width while maintaining aspect ratio */
+    height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
+    display: block; /* Remove any extra spacing that might appear below the image */
+    object-fit: contain; /* Fit the image inside the container while maintaining aspect ratio */
+}
+.k-card {
+  padding: 0.21rem 0.21rem; height: 50px;
+  box-shadow: 1px 1px 3px var(--shadow-color);
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+.k-card:hover {box-shadow: none;}
+
+/* Card Images in skill section */
+#skills .card-img-top {height: 200px; padding: 20px;}
+
+
+#return-to-top{
+  z-index: 3;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Position behind other content */
+}
