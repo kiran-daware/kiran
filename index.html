@@ -67,9 +67,9 @@
               <!-- Card 2 -->                
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card k-card">
-                <a href="https://www.electricaleasy.com/" target="_blank">
-                  <img src="https://1.bp.blogspot.com/-cgVzA3tXHMo/UwYiTPsYVDI/AAAAAAAAAc8/TygAMhgrURQ/s1600/elecrticaleasay1.png" class="card-img-top k-img-myworks" alt="elecrticaleasy.com">
-                </a>
+                  <a href="https://github.com/kiran-daware" target="_blank">
+                    <img src="assets/github.png" class="card-img-top k-img-myworks" style="padding:45px;" alt="GitHub page of Kiran Daware">
+                  </a>
                 </div>
               </div>
 
@@ -77,7 +77,9 @@
               <!-- Card 3 -->
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card k-card">
-                <h3>kvmlab.in</h3>
+                <a href="https://www.electricaleasy.com/" target="_blank">
+                  <img src="https://1.bp.blogspot.com/-cgVzA3tXHMo/UwYiTPsYVDI/AAAAAAAAAc8/TygAMhgrURQ/s1600/elecrticaleasay1.png" class="card-img-top k-img-myworks" alt="elecrticaleasy.com">
+                </a>
                 </div>
               </div>
               
@@ -106,9 +108,8 @@
                           <a class="btn k-btn-sec" href="https://github.com/kiran-daware/" target=_blank>
                             <i class="fab fa-github"></i>
                           </a>
-                          <a class="btn k-btn-sec" href="mailto:kiran@dkiran.net" target=_blank>
-                            <i class="fas fa-envelope"></i>
-                          </a>
+                          <div class="btn k-btn-sec" style="padding:0;" id="emailButtonContainer">
+                          </div>
                         </div>
                 </div>
                 <div class="col-lg-6 p-5"><img class="img-fluid" src="assets/home-guy.png" alt=""></div>
@@ -128,7 +129,7 @@
               <div class="card">
                 <img src="assets/telecom.svg" class="card-img-top" alt="telecom">
                 <div class="card-body">
-                  <h4 class="card-title">Telecom Skills</h4>
+                  <h4 class="card-title">Telecom</h4>
                   <ul class="card-text">
                     <li>VoIP (SIP / H323)</li>
                     <li>SS7 / ISUP</li>
@@ -137,7 +138,14 @@
                     <li>Session Border Controllers</li>
                     <li>Class 4 Soft-Switches</li>
                     <li>Media Gateways</li>
-                    </ul>
+                  </ul>
+                  <h6 class="card-title">Tools/Software</h6>
+                  <ul class="card-text">
+                    <li>SIPp</li>
+                    <li>Wireshark</li>
+                    <li>Cisco Packet Tracer</li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -151,9 +159,10 @@
                   <ul class="card-text">
                     <li>RHEL/CentOS, Ubuntu, others</li>
                     <li>VMware, KVM</li>
-                    <li>AWS</li>
                     <li>Docker Containers</li>
                     <li>Networking</li>
+                    <li>AWS</li>
+                    <a href="https://www.credly.com/badges/fdfb54d8-e0c4-40a6-8ba0-1a679b74a839/public_url"><img src="assets/aws-knowledge-cloud-essentials.png" alt="aws-knowledge-cloud-essentials credly badge Kiran Daware"></a>
                     </ul>
                 </div>
               </div>
@@ -173,11 +182,17 @@
                     <li>HTML/CSS</li>
                     <li>PHP</li>
                 </ul>
+                <h6 class="card-title">Tools/Software</h6>
+                <ul class="card-text">
+                  <li>VSCode</li>
+                  <li>WSL</li>
+                </ul>
                 </div>
               </div>
             </div>
 
-          </div>
+          </div> <!--row box div end-->
+
         </div>
 
         </section>
@@ -364,5 +379,29 @@ particlesJS("particles-js", {
   "retina_detect": true
 })
     </script>
+
+
+
+<script type="text/javascript">
+  // Define the email address
+  var emailAddress = "kiran.daware@outlook.com";
+  
+  // Function to generate the mailto link
+  function generateMailtoLink() {
+    var link = document.createElement("a");
+    link.setAttribute("class", "btn k-btn-sec");
+    link.setAttribute("href", "mailto:" + emailAddress);
+    link.setAttribute("target", "_blank");
+    link.innerHTML = '<i class="fas fa-envelope"></i>';
+    
+    // Append the button to the specified container
+    var container = document.getElementById("emailButtonContainer");
+    container.appendChild(link);
+  }
+  
+  // Call the function to generate the mailto link
+  generateMailtoLink();
+</script>
+
     </body>
 </html>
