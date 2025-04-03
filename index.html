@@ -48,7 +48,9 @@
                             <a class="nav-link btn k-btn-pri" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn k-btn-pri" href="#contact">Contact</a>
+                          <script>
+                            document.write('<a class="nav-link btn k-btn-pri" href="mailto:' + 'kirandaware' + '@' + 'outlook.com">Contact ✉ </a>');
+                          </script>
                         </li>
                     </ul>
                 </div>
@@ -62,8 +64,18 @@
         <section id="myworks">
           <div class="container-fluid content">
             <div class="row box">
-  
+
+              
               <!-- Card 1 -->
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="card k-card">
+                  <a href="https://kiran-daware.github.io/sipp-xml/" target="_blank" style="text-decoration:none;">
+                      <b><span style="font-size: 28px; color: #71695e">k</span><span style="font-size:20px;color:#ff943f;">SipP</span></b>
+                      <span style="color:var(--sec-color-d);font-size:18px;"> xml scenarios</span></a>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card k-card">
                   <a href="https://github.com/kiran-daware/kSipP" target="_blank" style="text-decoration:none;">
@@ -73,7 +85,7 @@
               </div>
 
                 
-              <!-- Card 2 -->                
+              <!-- Card 3 -->                
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card k-card">
                   <a href="https://github.com/kiran-daware" target="_blank">
@@ -83,7 +95,7 @@
               </div>
 
   
-              <!-- Card 3 -->
+              <!-- Card 4 -->
               <div class="col-lg-3 col-md-3 col-sm-12">
                 <div class="card k-card">
                 <a href="https://www.electricaleasy.com/" target="_blank">
@@ -258,7 +270,7 @@
       </main>
       <footer class="footer text-center mt-3">
           <div class="container">
-              <p>&copy; 2023 Kiran Daware. All Rights Reserved. | <span style="color: red;">Website Still Under Development</span></p>
+              <p>&copy; 2023-2025 Kiran Daware. All Rights Reserved. | <span style="color: red;">Website Still Under Development</span></p>
           </div>
       </footer>
 
@@ -394,7 +406,7 @@ particlesJS("particles-js", {
 
 <script type="text/javascript">
   // Define the email address
-  var emailAddress = "kiran.daware@outlook.com";
+  var emailAddress = "kirandaware@outlook.com";
   
   // Function to generate the mailto link
   function generateMailtoLink() {
@@ -412,6 +424,7 @@ particlesJS("particles-js", {
   // Call the function to generate the mailto link
   generateMailtoLink();
 </script>
+
 
     </body>
 </html>
