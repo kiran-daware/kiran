@@ -25,7 +25,7 @@ section {
   background: linear-gradient(rgb(255 255 255 / 95%), rgb(255 255 255 / 50%)), url(assets/home-guy.png);
   background-size: cover;
 }
-#about .img-fluid {border-radius: 10%; filter:drop-shadow(8px 8px 10px gray);}
+#about .img-fluid {border-radius: 28px; box-shadow: 0px 0px 28px 28px rgba(255, 255, 255, 0.5);}
 
 .k-logo{font-size: 25px; color: var(--sec-color); text-decoration: none;}
 .k-logo:hover{color: var(--sec-color-d);}
