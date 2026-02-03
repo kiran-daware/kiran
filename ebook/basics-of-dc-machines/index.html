@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basics of DC Machines - Kiran Daware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  [data-theme="dark"] {
+    --bg: #0f1117;
+    --bg-card: #1a1d27;
+    --bg-card-hi: #222636;
+    --border: rgba(255,255,255,0.08);
+    --border-hi: rgba(255,255,255,0.15);
+    --text: #f0f2f7;
+    --text-mid: #9aa3bb;
+    --text-dim: #5e6680;
+    --accent: #38bdf8;
+    --accent-dim: rgba(56,189,248,0.12);
+    --accent-glow: rgba(56,189,248,0.25);
+    --green: #34d399;
+    --shadow-card: 0 2px 24px rgba(0,0,0,0.25);
+  }
+
+  [data-theme="light"] {
+    --bg: #ffffff;
+    --bg-card: #f8f9fb;
+    --bg-card-hi: #eef0f4;
+    --border: rgba(0,0,0,0.08);
+    --border-hi: rgba(0,0,0,0.12);
+    --text: #1e2230;
+    --text-mid: #5a6272;
+    --text-dim: #8a91a3;
+    --accent: #2563eb;
+    --accent-dim: rgba(37,99,235,0.08);
+    --accent-glow: rgba(37,99,235,0.2);
+    --green: #10b981;
+    --shadow-card: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  :root {
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+    --display: 'Playfair Display', serif;
+    --radius: 12px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.3s ease;
+  }
+  [data-theme="dark"] nav { background: rgba(15,17,23,0.75); }
+  [data-theme="light"] nav { background: rgba(255,255,255,0.85); }
+
+  .nav-logo {
+    font-family: var(--sans);
+    font-weight: 600; font-size: 0.95rem;
+    color: var(--text); text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo .logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .theme-toggle:hover {
+    background: var(--bg-card-hi);
+    border-color: var(--border-hi);
+  }
+  .theme-toggle svg {
+    width: 18px; height: 18px;
+    color: var(--text-mid);
+  }
+
+  /* Main Content */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .breadcrumb {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+  .breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: var(--text-mid); }
+
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  .ebook-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow-card);
+  }
+
+  .ebook-info {
+    margin-bottom: 32px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-row:last-child { border-bottom: none; }
+
+  .info-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    min-width: 100px;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .download-section {
+    background: var(--bg-card-hi);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+
+  .download-section h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .download-section p {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+
+  [data-theme="dark"] .btn-primary {
+    background: var(--accent);
+    color: #0f1117;
+    box-shadow: 0 0 18px var(--accent-glow);
+  }
+  [data-theme="light"] .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 2px 12px var(--accent-glow);
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+  [data-theme="dark"] .btn-primary:hover {
+    background: #7dd3fc;
+    box-shadow: 0 0 28px rgba(56,189,248,0.4);
+  }
+  [data-theme="light"] .btn-primary:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+  }
+
+  .btn svg { width: 16px; height: 16px; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 24px; }
+    .container { padding: 60px 24px; }
+    .ebook-card { padding: 28px; }
+    .download-section { padding: 24px; }
+    .info-row { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="logo-dot"></span>
+    Kiran Daware
+  </a>
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="#ebooks">eBooks</a> / Basics of DC Machines
+  </div>
+
+  <h1>Basics of DC Machines</h1>
+  <p class="subtitle">A comprehensive guide to understanding DC motor and generator fundamentals</p>
+
+  <div class="ebook-card">
+    <div class="ebook-info">
+      <div class="info-row">
+        <span class="info-label">Format</span>
+        <span class="info-value">PDF</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Pages</span>
+        <span class="info-value">~50 pages</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Language</span>
+        <span class="info-value">English</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Category</span>
+        <span class="info-value">Electrical Engineering</span>
+      </div>
+    </div>
+
+    <div class="download-section">
+      <h2>Download eBook</h2>
+      <p>Free educational resource for engineering students</p>
+      <a href="basics-of-dc-machines.pdf" class="btn btn-primary" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Theme Toggle
+  const themeToggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    } else {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>

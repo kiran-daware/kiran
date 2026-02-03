@@ -1,451 +1,974 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGN95GQ0F7"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-HGN95GQ0F7');
-        </script>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiran Daware | Telecom Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  /* ─────────────────────────────────────
+     RESET & VARIABLES
+  ──────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Kiran Daware">
-        <title>Kiran Daware | Telecom Engineer</title>
-        <meta name="description" content="Kiran Daware is a Telecom and Networking Engineer specializing in VoIP, Linux, Networking, Clound and many other technologies. Explore his portfolio and projects.">
+  /* Dark theme (default) */
+  [data-theme="dark"] {
+    --bg:           #0f1117;
+    --bg-card:      #1a1d27;
+    --bg-card-hi:   #222636;
+    --border:       rgba(255,255,255,0.08);
+    --border-hi:    rgba(255,255,255,0.15);
+    --text:         #f0f2f7;
+    --text-mid:     #9aa3bb;
+    --text-dim:     #5e6680;
+    --accent:       #38bdf8;
+    --accent-dim:   rgba(56,189,248,0.12);
+    --accent-glow:  rgba(56,189,248,0.25);
+    --green:        #34d399;
+    --shadow-card:  0 2px 24px rgba(0,0,0,0.25);
+    --shadow-hover: 0 6px 40px rgba(0,0,0,0.35);
+  }
 
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Kiran Daware",
-            "url": "https://dkiran.net",
-            "jobTitle": "Telecom Engineer",
-            "sameAs": [
-              "https://www.linkedin.com/in/kiran-daware/",
-              "https://github.com/kiran-daware",
-              "https://www.facebook.com/kdaware"
-            ]
-          }
-        </script>
-          
+  /* Light theme */
+  [data-theme="light"] {
+    --bg:           #ffffff;
+    --bg-card:      #f8f9fb;
+    --bg-card-hi:   #eef0f4;
+    --border:       rgba(0,0,0,0.08);
+    --border-hi:    rgba(0,0,0,0.12);
+    --text:         #1e2230;
+    --text-mid:     #5a6272;
+    --text-dim:     #8a91a3;
+    --accent:       #2563eb;
+    --accent-dim:   rgba(37,99,235,0.08);
+    --accent-glow:  rgba(37,99,235,0.2);
+    --green:        #10b981;
+    --shadow-card:  0 2px 16px rgba(0,0,0,0.06);
+    --shadow-hover: 0 6px 32px rgba(0,0,0,0.1);
+  }
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+  :root {
+    --mono:         'IBM Plex Mono', monospace;
+    --sans:         'Inter', sans-serif;
+    --display:      'Playfair Display', serif;
+    --radius:       12px;
+  }
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
-        <script src="assets/particles.min.js"></script>
-    </head>
-    <body class="k-bg-body">
-      <div id="particles-js"></div>
-      <header>
-        <nav class="navbar navbar-expand-md shadow py-1 mb-3 fixed-top k-bg-nav">
-            <div class="container"> 
-                <a href="#"><svg style="width:42px; color:#ea755e; margin-right:20px;" className="dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 21">
-                    <path stroke="currentColor" strokeLinecap="round" strokeWidth="3" d="M7.24 7.194a24.16 24.16 0 0 1 3.72-3.062m0 0c3.443-2.277 6.732-2.969 8.24-1.46 2.054 2.053.03 7.407-4.522 11.959-4.552 4.551-9.906 6.576-11.96 4.522C1.223 17.658 1.89 14.412 4.121 11m6.838-6.868c-3.443-2.277-6.732-2.969-8.24-1.46-2.054 2.053-.03 7.407 4.522 11.959m3.718-10.499a24.16 24.16 0 0 1 3.719 3.062M17.798 11c2.23 3.412 2.898 6.658 1.402 8.153-1.502 1.503-4.771.822-8.2-1.433m1-6.808a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
-                </svg></a>
-                <a class="navbar-brand k-logo k-shadow" href="#">Kiran Daware</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link btn k-btn-pri" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn k-btn-pri" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn k-btn-pri" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                          <script>
-                            document.write('<a class="nav-link btn k-btn-pri" href="mailto:' + 'kirandaware' + '@' + 'outlook.com">Contact ✉ </a>');
-                          </script>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-      </header>
-
-
-      <main class="container">
-<!-- My Works -->
-        <section id="myworks">
-          <div class="container-fluid content">
-            <div class="row box">
-
-              
-              <!-- Card 1 -->
-              <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="card k-card">
-                  <a href="https://kiran-daware.github.io/sipp-xml/" target="_blank" style="text-decoration:none;">
-                      <b><span style="font-size: 28px; color: #71695e">k</span><span style="font-size:20px;color:#ff943f;">SipP</span></b>
-                      <span style="color:var(--sec-color-d);font-size:18px;"> xml scenarios</span></a>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="card k-card">
-                  <a href="https://github.com/kiran-daware/kSipP" target="_blank" style="text-decoration:none;">
-                      <b><span style="font-size: 38px; color: #71695e">k</span><span style="font-size:30px;color:#ff943f;">SipP</span></b>
-                      <span style="color:var(--sec-color-d);font-size:14px;">for everyone!</span></a>
-                </div>
-              </div>
-
-                
-              <!-- Card 3 -->                
-              <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="card k-card">
-                  <a href="https://github.com/kiran-daware" target="_blank">
-                    <img src="assets/github.png" class="card-img-top k-img-myworks" alt="GitHub page of Kiran Daware">
-                  </a>
-                </div>
-              </div>
-
-  
-              <!-- Card 4 -->
-              <div class="col-lg-3 col-md-3 col-sm-12">
-                <div class="card k-card">
-                <a href="https://www.electricaleasy.com/" target="_blank">
-                  <img src="https://1.bp.blogspot.com/-cgVzA3tXHMo/UwYiTPsYVDI/AAAAAAAAAc8/TygAMhgrURQ/s1600/elecrticaleasay1.png" class="card-img-top k-img-myworks" alt="elecrticaleasy.com">
-                </a>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </section>
-
-
-
-<!-- About -->
-        <section id="about">
-            <div class="row column1">
-                <div class="col-lg-8 col-md-6 text-justify">
-                    <h2>Hello,</h2>
-                    <p>I'm Kiran! If I had to sum up who I am in a single word, it would be "Curious!"</p>
-                    <p>I'm passionate about computers, Linux, electronics, and astrophysics. Professionally, I'm in the Telecom field, specializing in Session Border Controllers, Media Gateways, and Class 4 Soft-Switches.</p>
-                    <p>My days involve troubleshooting Linux server and application issues, as well as deploying and maintaining Session Border Controllers in production environments. I love diving into complex challenges and finding innovative solutions.</p>
-                    <p>Welcome to my corner of the digital universe – where curiosity is my guiding light and exploration is the name of the game.</p>
-                    <p>Cheers,<br>
-                    Kiran Daware.</p>
-                    <!--<div class="btn k-btn-pri mb-3">Checkout My Resume!</div>-->
-                        <div class=k-social-icon>
-                          <a class="btn k-btn-sec" href="https://www.linkedin.com/in/kiran-daware/" target=_blank>
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                          </a>
-                          <a class="btn k-btn-sec" href="https://github.com/kiran-daware/" target=_blank>
-                            <i class="fab fa-github"></i>
-                          </a>
-                          <div class="btn k-btn-sec" style="padding:0;" id="emailButtonContainer">
-                          </div>
-                        </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-5"><img class="img-fluid" src="assets/kiran-daware.jpg" alt="Kiran Daware"></div>
-            </div>
-        </section>
-
-
-<!-- Skills -->
-        <section id="skills">
-
-        <div class="container-fluid content">
-          <h2 class="text-center mb-3">Skills</h2>
-          <div class="row box">
-
-            <!-- Card 1 -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card">
-                <img src="assets/telecom.svg" class="card-img-top" alt="telecom">
-                <div class="card-body">
-                  <h4 class="card-title">Telecom</h4>
-                  <ul class="card-text">
-                    <li>VoIP (SIP / H323)</li>
-                    <li>SS7 / ISUP</li>
-                    <li>TCP/IP, WebRTC, TLS/SSL Diameter, Radius etc.</li>
-                    <li>Session Border Controllers</li>
-                    <li>Class 4 Soft-Switches</li>
-                    <li>Media Gateways</li>
-                  </ul>
-                  <h6 class="card-title">Tools/Software</h6>
-                  <ul class="card-text">
-                    <li>SIPp</li>
-                    <li>Wireshark</li>
-                    <li>Cisco Packet Tracer</li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card">
-                <img src="assets/code.svg" class="card-img-top" alt="phone,css,javascript,html">
-                <div class="card-body">
-                  <h4 class="card-title">Linux / Networking / Infra</h4>
-                  <ul class="card-text">
-                    <li>RHEL/CentOS, Ubuntu, others</li>
-                    <li>VMware, KVM</li>
-                    <li>Docker Containers</li>
-                    <li>Networking</li>
-                    <li>AWS, Azure</li></ul>
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-in/KiranDaware-6060/5ECAB6CD1444E5C3?sharingId=9755168848E13420" target="_blank"><img class="kbadge" src="assets/microsoft-certified-fundamentals-badge.png" alt="Microsoft Certified Azure fundamentals badge Kiran Daware"></a>
-                    <a href="https://www.credly.com/badges/fdfb54d8-e0c4-40a6-8ba0-1a679b74a839/public_url" target="_blank"><img class="kbadge" src="assets/aws-knowledge-cloud-essentials.png" alt="aws-knowledge-cloud-essentials credly badge Kiran Daware"></a>
-                    <a href="https://www.credly.com/badges/caffe636-58f1-4b2d-880a-92d6acd4a40a/public_url" target="_blank"><img class="kbadge" src="assets/network-support-and-security.png" alt="Network Support and Security credly badge Kiran Daware"></a>
-                    
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="cardContainer col-lg-4 col-md-4 col-sm-12">
-              <div class="card">
-                <img src="assets/programming.svg" class="card-img-top" alt="javascript,css,html,c++">
-                <div class="card-body">
-                  <h5 class="card-title">Coding / Programming</h5>
-                  <ul class="card-text">
-                    <li>Python</li>
-                    <li>javascript</li>
-                    <li>Shell Scripting</li>
-                    <li>git version control</li>
-                    <li>HTML/CSS</li>
-                    <li>PHP</li>
-                </ul>
-                <h6 class="card-title">Tools/Software</h6>
-                <ul class="card-text">
-                  <li>VSCode</li>
-                  <li>WSL</li>
-                </ul>
-                </div>
-              </div>
-            </div>
-
-          </div> <!--row box div end-->
-
-        </div>
-
-        </section>
-        
-
-<!-- Projects -->
-        <section id="projects">
-
-          <div class="container-fluid content">
-            <h2 class="text-center mb-3">Projects</h2>
-
-            <!-- Project 1 -->
-            <div class="card mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3" style="padding: 0 50px;">
-                  <a href="https://github.com/kiran-daware/kSipP" target="_blank" style="text-decoration:none;">
-                      <b><span style="font-size: 38px; color: #71695e">k</span><span style="font-size:30px;color:#ff943f;">SipP</span></b><br />
-                      <span style="color:var(--sec-color-d);font-size:14px;">for everyone!</span></a>
-                    
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body">
-                    <h5 class="card-title">kSipP</h5>
-                    <p class="card-text">A Python-Django based web app to make SipP easier for everyone.</p>
-                    <p class="card-text">Run SipP scripts directly from the web-browser, modify SipP scenario xml files, or create your own xml scenarios.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="card mb-3">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <img src="assets/selenium.png" class="card-img" alt="Image">
-                </div>
-                <div class="col-md-9">
-                  <div class="card-body">
-                    <h5 class="card-title">SBC Quick Config</h5>
-                    <p class="card-text">A Python-Selenium based script for quickly configuring SBC.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </section>
-
-        <!-- Back to top button -->
-        <a href="#" id="return-to-top" class="btn k-btn-pri btn-lg back-to-top" role="button" title="Return to Top"><i class="fas fa-chevron-up"></i></a>
-
-      </main>
-      <footer class="footer text-center mt-3">
-        <div class="container">
-            <p>&copy; 2023–2025 Kiran Daware. All Rights Reserved. | 
-            <span style="color: #0077cc;">This website — and its creator — are both a work in progress.</span></p>
-        </div>
-    </footer>
-    
-
-    <!-- Load bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-    <script>
-
-    // // when moving to server Load the Particle.js configuration from particles-config.json
-    // fetch("path/to/particles-config.json")
-    //   .then(response => response.json())
-    //   .then(config => {
-    //     particlesJS("particles-js", config);
-    //   })
-    //   .catch(error => {
-    //     console.error("Error loading Particle.js configuration:", error);
-    //   });
-
-
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 125,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#1c2540"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 1,
-        "color": "#1c2540"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 1,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 1,
-        "opacity_min": 0,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 4,
-        "size_min": 0.3,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#1c2540",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 1,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 600
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 250,
-        "size": 0,
-        "duration": 2,
-        "opacity": 0,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 50,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-})
-    </script>
-
-
-
-<script type="text/javascript">
-  // Define the email address
-  var emailAddress = "kirandaware@outlook.com";
-  
-  // Function to generate the mailto link
-  function generateMailtoLink() {
-    var link = document.createElement("a");
-    link.setAttribute("class", "btn k-btn-sec");
-    link.setAttribute("href", "mailto:" + emailAddress);
-    link.setAttribute("target", "_blank");
-    link.innerHTML = '<i class="fas fa-envelope"></i>';
-    
-    // Append the button to the specified container
-    var container = document.getElementById("emailButtonContainer");
-    container.appendChild(link);
+  /* ─────────────────────────────────────
+     NAV
+  ──────────────────────────────────────── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.3s ease;
+  }
+  [data-theme="dark"] nav {
+    background: rgba(15,17,23,0.75);
+  }
+  [data-theme="light"] nav {
+    background: rgba(255,255,255,0.85);
   }
   
-  // Call the function to generate the mailto link
-  generateMailtoLink();
+  .nav-logo {
+    font-family: var(--sans);
+    font-weight: 600; font-size: 0.95rem;
+    color: var(--text); text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo .logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+  
+  .nav-right {
+    display: flex; align-items: center; gap: 20px;
+  }
+  
+  .nav-links {
+    display: flex; gap: 28px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.82rem; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* Theme Toggle Button */
+  .theme-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .theme-toggle:hover {
+    background: var(--bg-card-hi);
+    border-color: var(--border-hi);
+  }
+  .theme-toggle svg {
+    width: 18px; height: 18px;
+    color: var(--text-mid);
+    transition: color 0.2s;
+  }
+  .theme-toggle:hover svg {
+    color: var(--accent);
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 40px; height: 40px;
+    align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .mobile-menu-btn:hover {
+    background: var(--bg-card-hi);
+    border-color: var(--border-hi);
+  }
+  .mobile-menu-btn svg {
+    width: 20px; height: 20px;
+    color: var(--text-mid);
+  }
+
+  /* Mobile Nav Menu */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 48px;
+    box-shadow: var(--shadow-card);
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .mobile-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-nav a {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover {
+    color: var(--accent);
+  }
+
+  /* ─────────────────────────────────────
+     HERO
+  ──────────────────────────────────────── */
+  .hero {
+    max-width: 1080px; margin: 0 auto;
+    padding: 110px 48px 90px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+  }
+  /* big ambient glow behind hero */
+  [data-theme="dark"] .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 10%; right: 10%; bottom: 20%;
+    background: radial-gradient(ellipse at 40% 50%, rgba(56,189,248,0.07) 0%, transparent 65%),
+                radial-gradient(ellipse at 75% 60%, rgba(52,211,153,0.05) 0%, transparent 55%);
+    pointer-events: none; z-index: 0;
+  }
+  [data-theme="light"] .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 10%; right: 10%; bottom: 20%;
+    background: radial-gradient(ellipse at 40% 50%, rgba(37,99,235,0.04) 0%, transparent 65%),
+                radial-gradient(ellipse at 75% 60%, rgba(16,185,129,0.03) 0%, transparent 55%);
+    pointer-events: none; z-index: 0;
+  }
+  .hero-text { max-width: 580px; position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 0.72rem;
+    color: var(--accent); font-weight: 500;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: 6px; padding: 6px 14px;
+    margin-bottom: 30px;
+    opacity: 0; animation: fadeUp 0.6s 0.1s ease forwards;
+  }
+  [data-theme="light"] .hero-eyebrow {
+    border-color: rgba(37,99,235,0.2);
+  }
+  .hero-eyebrow .blink {
+    display: inline-block; width: 7px; height: 7px;
+    border-radius: 50%; background: var(--accent);
+    box-shadow: 0 0 6px var(--accent-glow);
+    animation: blink 1.4s ease infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+
+  .hero-text h1 {
+    font-family: var(--display);
+    font-size: clamp(2.8rem, 5.2vw, 3.8rem);
+    font-weight: 700; color: var(--text);
+    line-height: 1.12; letter-spacing: -1px;
+    opacity: 0; animation: fadeUp 0.6s 0.2s ease forwards;
+  }
+  [data-theme="dark"] .hero-text h1 em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--accent), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  [data-theme="light"] .hero-text h1 em {
+    font-style: italic;
+    background: linear-gradient(135deg, #2563eb, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-text p {
+    margin-top: 26px; font-size: 1rem;
+    color: var(--text-mid); font-weight: 300; line-height: 1.8;
+    max-width: 500px;
+    opacity: 0; animation: fadeUp 0.6s 0.35s ease forwards;
+  }
+  .hero-actions {
+    margin-top: 38px; display: flex; gap: 12px; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.6s 0.48s ease forwards;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 10px 22px; border-radius: 8px;
+    font-size: 0.82rem; font-weight: 500;
+    text-decoration: none; transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  [data-theme="dark"] .btn-primary {
+    background: var(--accent); color: #0f1117; font-weight: 600;
+    box-shadow: 0 0 18px var(--accent-glow);
+  }
+  [data-theme="light"] .btn-primary {
+    background: var(--accent); color: #ffffff; font-weight: 600;
+    box-shadow: 0 2px 12px var(--accent-glow);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+  }
+  [data-theme="dark"] .btn-primary:hover {
+    background: #7dd3fc;
+    box-shadow: 0 0 28px rgba(56,189,248,0.4);
+  }
+  [data-theme="light"] .btn-primary:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+  }
+  .btn-ghost {
+    background: var(--bg-card); color: var(--text);
+    border-color: var(--border-hi);
+  }
+  .btn-ghost:hover { background: var(--bg-card-hi); border-color: var(--border-hi); }
+  .btn svg { width: 14px; height: 14px; }
+
+  /* Avatar - Circular & Larger */
+  .hero-avatar {
+    opacity: 0; animation: fadeUp 0.6s 0.25s ease forwards;
+    position: relative; z-index: 1;
+  }
+  .avatar-wrap {
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 3px solid var(--border-hi);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-card);
+  }
+  [data-theme="dark"] .avatar-wrap {
+    box-shadow: var(--shadow-card), 0 0 60px rgba(56,189,248,0.06);
+  }
+  [data-theme="light"] .avatar-wrap {
+    box-shadow: var(--shadow-card);
+  }
+  .avatar-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─────────────────────────────────────
+     SECTION COMMONS
+  ──────────────────────────────────────── */
+  .section { max-width: 1080px; margin: 0 auto; padding: 96px 48px; }
+  .section-header { margin-bottom: 56px; }
+  .section-label {
+    font-family: var(--mono); font-size: 0.7rem;
+    color: var(--accent); font-weight: 500;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+    font-weight: 700; color: var(--text); letter-spacing: -0.4px;
+  }
+  .section-sub {
+    margin-top: 10px; font-size: 0.92rem;
+    color: var(--text-mid); font-weight: 400; max-width: 480px;
+  }
+
+  /* ─────────────────────────────────────
+     SKILLS
+  ──────────────────────────────────────── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative; overflow: hidden;
+  }
+  /* top accent stripe on hover */
+  .skill-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--green));
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .skill-card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(56,189,248,0.2);
+    transform: translateY(-3px);
+  }
+  .skill-card:hover::before { opacity: 1; }
+
+  .skill-card-head {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 22px;
+  }
+  .skill-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: var(--accent-dim);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .skill-card-title {
+    font-size: 0.92rem; font-weight: 600; color: var(--text);
+  }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.7rem; font-weight: 400;
+    color: var(--text-mid);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.18s;
+  }
+  .tag:hover {
+    background: var(--accent-dim);
+    border-color: rgba(56,189,248,0.3);
+    color: var(--accent);
+  }
+
+  .skill-divider {
+    margin-top: 20px; padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+  .skill-divider-label {
+    font-family: var(--mono); font-size: 0.62rem;
+    color: var(--text-dim); text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 10px;
+  }
+
+  /* Badges */
+  .badges-row {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 44px;
+  }
+  .badge-link {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 9px; padding: 9px 16px;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .badge-link:hover {
+    border-color: rgba(56,189,248,0.25);
+    background: var(--bg-card-hi);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .badge-link img { height: 26px; width: auto; }
+  .badge-link span {
+    font-family: var(--mono); font-size: 0.67rem;
+    color: var(--text-mid); font-weight: 500;
+  }
+  .badge-link:hover span { color: var(--accent); }
+
+  /* ─────────────────────────────────────
+     PROJECTS
+  ──────────────────────────────────────── */
+  .projects-list { display: flex; flex-direction: column; gap: 16px; }
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    padding: 34px 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px; align-items: start;
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .project-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green), var(--accent));
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .project-card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(52,211,153,0.2);
+    transform: translateY(-3px);
+  }
+  .project-card:hover::before { opacity: 1; }
+
+  .project-meta {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  }
+  .project-number {
+    font-family: var(--mono); font-size: 0.7rem;
+    color: var(--green); font-weight: 600;
+    background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25);
+    border-radius: 5px; padding: 3px 9px;
+  }
+  .project-tags { display: flex; gap: 6px; }
+  .project-tag {
+    font-family: var(--mono); font-size: 0.63rem;
+    color: var(--text-dim); background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 3px 8px;
+  }
+  .project-name {
+    font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 10px;
+  }
+  .project-desc {
+    font-size: 0.87rem; color: var(--text-mid); line-height: 1.75; max-width: 520px;
+  }
+  .project-links { display: flex; gap: 8px; margin-top: 20px; }
+  .project-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.77rem; font-weight: 500; color: var(--text-mid);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 12px;
+    text-decoration: none; transition: all 0.18s;
+  }
+  .project-link:hover {
+    background: var(--accent-dim);
+    border-color: rgba(56,189,248,0.3);
+    color: var(--accent);
+  }
+  .project-link svg { width: 12px; height: 12px; }
+
+  .project-image {
+    width: 140px; height: 96px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-card-hi);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .project-image img { width: 100%; height: 100%; object-fit: cover; }
+  .project-image .placeholder-icon {
+    color: var(--text-dim); opacity: 0.3;
+  }
+
+  /* ─────────────────────────────────────
+     FOOTER
+  ──────────────────────────────────────── */
+  .footer-wrap {
+    border-top: 1px solid var(--border);
+    background: rgba(15,17,23,0.6);
+  }
+  footer {
+    max-width: 1080px; margin: 0 auto;
+    padding: 44px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-left { font-size: 0.76rem; color: var(--text-dim); }
+  .footer-left .footer-note {
+    display: block; margin-top: 5px;
+    font-size: 0.7rem; font-style: italic; color: var(--text-dim); opacity: 0.6;
+  }
+  .footer-links { display: flex; gap: 22px; }
+  .footer-links a {
+    font-size: 0.78rem; color: var(--text-mid);
+    text-decoration: none; transition: color 0.2s;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .footer-links a:hover { color: var(--accent); }
+  .footer-links svg { width: 15px; height: 15px; }
+
+  /* ─────────────────────────────────────
+     SCROLL REVEAL
+  ──────────────────────────────────────── */
+  .reveal {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─────────────────────────────────────
+     RESPONSIVE
+  ──────────────────────────────────────── */
+  @media (max-width: 820px) {
+    nav { padding: 0 32px; }
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .mobile-nav { display: block; }
+    
+    .hero { grid-template-columns: 1fr; gap: 44px; padding: 90px 32px 64px; }
+    .hero-avatar { order: -1; justify-self: center; }
+    .avatar-wrap { width: 220px; height: 220px; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .section { padding: 72px 32px; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 0 24px; }
+    .mobile-nav { padding: 20px 24px; }
+    
+    .hero { padding: 72px 24px 52px; }
+    .avatar-wrap { width: 180px; height: 180px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .project-card { grid-template-columns: 1fr; }
+    .project-image { display: none; }
+    .section { padding: 58px 24px; }
+    footer { padding: 34px 24px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="logo-dot"></span>
+    Kiran Daware
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <ul>
+    <li><a href="#about" class="mobile-nav-link">About</a></li>
+    <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+    <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-text">
+    <div class="hero-eyebrow">
+      <span class="blink"></span>
+      Telecom Engineer &amp; Developer
+    </div>
+    <h1>Hi, I'm Kiran.<br><em>Curious by nature.</em></h1>
+    <p>
+      Passionate about computers, Linux, electronics, and astrophysics.
+      Professionally I specialise in Session Border Controllers, Media Gateways,
+      and Class 4 Soft-Switches — troubleshooting, deploying, and building
+      tools that make complex problems simpler.
+    </p>
+    <div class="hero-actions">
+      <a href="https://github.com/kiran-daware" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://easysipp.com" target="_blank" rel="noopener" class="btn btn-primary">
+        easySIPp →
+      </a>
+    </div>
+  </div>
+  <div class="hero-avatar">
+    <div class="avatar-wrap">
+      <img src="assets/kiran-daware.jpg" alt="Kiran Daware">
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-header reveal">
+    <div class="section-label">// skills</div>
+    <h2 class="section-title">What I work with</h2>
+    <p class="section-sub">Domain expertise in telecom, grounded in hands-on Linux, cloud, and software engineering.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-card-head">
+        <div class="skill-icon">📡</div>
+        <div class="skill-card-title">Telecom</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">VoIP (SIP / H.323)</span>
+        <span class="tag">SS7 / ISUP</span>
+        <span class="tag">TCP/IP</span>
+        <span class="tag">WebRTC</span>
+        <span class="tag">TLS/SSL</span>
+        <span class="tag">Diameter</span>
+        <span class="tag">Radius</span>
+        <span class="tag">SBC</span>
+        <span class="tag">Class 4 Soft-Switches</span>
+        <span class="tag">Media Gateways</span>
+      </div>
+      <div class="skill-divider">
+        <div class="skill-divider-label">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">SIPp</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">Cisco Packet Tracer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-card-head">
+        <div class="skill-icon">🖥️</div>
+        <div class="skill-card-title">Linux / Networking / Infra</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">RHEL / CentOS</span>
+        <span class="tag">Ubuntu</span>
+        <span class="tag">VMware</span>
+        <span class="tag">KVM</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Networking</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Azure</span>
+      </div>
+
+        <div class="badges-row reveal">
+          <a href="https://learn.microsoft.com/api/credentials/share/en-in/KiranDaware-6060/5ECAB6CD1444E5C3?sharingId=9755168848E13420" class="badge-link" target="_blank" rel="noopener">
+            <img src="assets/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals">
+            <span>Azure Fundamentals</span>
+          </a>
+          <a href="https://www.credly.com/badges/fdfb54d8-e0c4-40a6-8ba0-1a679b74a839/public_url" class="badge-link" target="_blank" rel="noopener">
+            <img src="assets/aws-knowledge-cloud-essentials.png" alt="AWS Cloud Essentials">
+            <span>AWS Cloud Essentials</span>
+          </a>
+          <a href="https://www.credly.com/badges/caffe636-58f1-4b2d-880a-92d6acd4a40a/public_url" class="badge-link" target="_blank" rel="noopener">
+            <img src="assets/network-support-and-security.png" alt="Network &amp; Security">
+            <span>Network &amp; Security</span>
+          </a>
+        </div>
+
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-card-head">
+        <div class="skill-icon">⟨/⟩</div>
+        <div class="skill-card-title">Coding / Programming</div>
+      </div>
+      <div class="skill-tags">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Shell Scripting</span>
+        <span class="tag">Git</span>
+        <span class="tag">HTML / CSS</span>
+        <span class="tag">PHP</span>
+      </div>
+      <div class="skill-divider">
+        <div class="skill-divider-label">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">VSCode</span>
+          <span class="tag">WSL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--div class="badges-row reveal">
+    <a href="https://learn.microsoft.com/api/credentials/share/en-in/KiranDaware-6060/5ECAB6CD1444E5C3?sharingId=9755168848E13420" class="badge-link" target="_blank" rel="noopener">
+      <img src="assets/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals">
+      <span>Azure Fundamentals</span>
+    </a>
+  </div-->
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">// projects</div>
+    <h2 class="section-title">Things I've built</h2>
+    <p class="section-sub">Side-projects born out of curiosity and a desire to solve real problems in telecom.</p>
+  </div>
+
+  <div class="projects-list">
+    <div class="project-card reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Django</span>
+            <span class="project-tag">Docker</span>
+          </div>
+        </div>
+        <div class="project-name">easySIPp</div>
+        <p class="project-desc">
+          A web platform that makes SIPp accessible for everyone. Run SIPp scripts
+          directly from the browser, create XML scenarios with a click-to-build interface,
+          preview call flows, and monitor tests in real-time.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/kiran-daware/easySIPp" class="project-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Repository
+          </a>
+          <a href="https://easysipp.com" class="project-link" target="_blank" rel="noopener">
+            Live Site →
+          </a>
+          <a href="https://kiran-daware.github.io/sipp-xml/" class="project-link" target="_blank" rel="noopener">
+            XML Builder →
+          </a>
+        </div>
+      </div>
+      <div class="project-image">
+        <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">02</span>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Selenium</span>
+          </div>
+        </div>
+        <div class="project-name">SBC Quick Config</div>
+        <p class="project-desc">
+          A Python-Selenium automation script for rapidly configuring Session Border Controllers —
+          cutting down repetitive setup tasks in production environments.
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="assets/selenium.png" alt="Selenium" style="object-fit:contain; padding: 14px;">
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">03</span>
+          <div class="project-tags">
+            <span class="project-tag">Blogger</span>
+            <span class="project-tag">Educational</span>
+          </div>
+        </div>
+        <div class="project-name">electricaleasy.com</div>
+        <p class="project-desc">
+          An educational blog started during engineering college that has helped thousands of students 
+          understand electrical engineering fundamentals. Covers Electrical Machines, Transformers, Power Systems, 
+          and core concepts with clear explanations.
+        </p>
+        <div class="project-links">
+          <a href="https://www.electricaleasy.com/" class="project-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Visit Site →
+          </a>
+          <a href="/ebook/basics-of-dc-machines/" class="project-link" target="_blank" rel="noopener">
+            Free ebook →
+          </a>
+        </div>
+      </div>
+      <div class="project-image">
+        <svg class="placeholder-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-wrap">
+  <footer>
+    <div class="footer-left">
+      © 2023–2025 Kiran Daware. All Rights Reserved.
+      <span class="footer-note">This website — and its creator — are both a work in progress.</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/kiran-daware" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.electricaleasy.com/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        ElectricalEasy
+      </a>
+      <a href="https://easysipp.com" target="_blank" rel="noopener">
+        easySIPp
+      </a>
+    </div>
+  </footer>
+</div>
+
+<!-- SCROLL REVEAL -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const parent = entry.target.parentElement;
+        const siblings = [...parent.querySelectorAll('.reveal')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), idx * 70);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => obs.observe(el));
+
+  // Theme Toggle
+  const themeToggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+  const sunIcon = document.querySelector('.sun-icon');
+  const moonIcon = document.querySelector('.moon-icon');
+
+  // Check for saved theme preference or default to 'dark'
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  });
+
+  function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    } else {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    }
+  }
+
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+
+  // Close mobile menu when clicking a link
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+      mobileNav.classList.remove('open');
+    }
+  });
 </script>
-
-
-    </body>
+</body>
 </html>
