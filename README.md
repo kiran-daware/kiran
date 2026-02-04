@@ -1,17 +1,22 @@
 # 👋 Hi, I'm Kiran Daware
 
-Welcome to my GitHub profile repository! This space serves as the foundation for my personal website that showcases my journey in the telecom world and the world of programming.
+**Telecom Engineer & Developer**
 
-## 🚀 About Me
+Welcome to my personal portfolio repository! This is the source code for my website showcasing my work in telecom/VoIP, software development, and more.
 
-- 🌐 Thats what this website is for : [dkiran.net](https://dkiran.net)
+## 🌐 Live Website
 
-## 🛠️ Projects
+**[dkiran.net](https://dkiran.net)** — Portfolio • Projects • Contact
 
-Here are some of the projects I've been working on:
+## 🚀 Featured Project
 
-- [kSipP](https://github.com/kiran-daware/kSipP): A web-based GUI for SipP, simplifying SIP/VoIP testing.
-- [sipp-xml](https://github.com/kiran-daware/sipp-xml): An online tool to create SIPp XML scenarios effortlessly.
-- [kFlow](https://github.com/kiran-daware/kFlow): A project focused on analysing calls from wireshark pcap traces.
+- [**easySIPp**](https://github.com/kiran-daware/easySIPp) - Web platform for SIPp testing • [Live](https://easysipp.com)
 
-Feel free to explore these repositories to see what I've been up to!
+## 🛠️ Built With
+
+HTML • CSS • JavaScript
+
+---
+
+Stay Connected,  
+**Kiran Daware.**

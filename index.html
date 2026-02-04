@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kiran Daware | Telecom Engineer</title>
+<meta name="description" content="Telecom engineer specialising in SIP, SBCs, media gateways, Linux, and cloud. Creator of easySIPp and electricaleasy.com.">
+<link rel="canonical" href="https://dkiran.net">
+<meta property="og:title" content="Kiran Daware | Telecom Engineer">
+<meta property="og:description" content="Telecom engineer specialising in SIP, SBCs, media gateways, Linux, and cloud. Creator of easySIPp and electricaleasy.com.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dkiran.net">
+<meta property="og:image" content="https://dkiran.net/assets/kiran-daware.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kiran Daware | Telecom Engineer">
+<meta name="twitter:description" content="Telecom engineer specialising in SIP, SBCs, media gateways, Linux, and cloud. Creator of easySIPp and electricaleasy.com.">
+<meta name="twitter:image" content="https://dkiran.net/assets/kiran-daware.jpg">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -33,7 +45,7 @@
 
   /* Light theme */
   [data-theme="light"] {
-    --bg:           #ffffff;
+    --bg:           #f1f1f1;
     --bg-card:      #f8f9fb;
     --bg-card-hi:   #eef0f4;
     --border:       rgba(0,0,0,0.08);
@@ -65,6 +77,19 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     transition: background 0.3s ease, color 0.3s ease;
+  }
+  /* Full-width subtle hero glow using body background, */
+  [data-theme="dark"] body {
+    background:
+      radial-gradient(ellipse at 40% 18%, rgba(56,189,248,0.09) 0%, transparent 40%)
+      no-repeat,
+      var(--bg);
+  }
+  [data-theme="light"] body {
+    background:
+      radial-gradient(ellipse at 40% 18%, rgba(37,99,235,0.09) 0%, transparent 38%)
+      no-repeat,
+      var(--bg);
   }
 
   /* ─────────────────────────────────────
@@ -207,23 +232,6 @@
     gap: 64px;
     align-items: center;
     position: relative;
-  }
-  /* big ambient glow behind hero */
-  [data-theme="dark"] .hero::before {
-    content: '';
-    position: absolute;
-    top: -120px; left: 10%; right: 10%; bottom: 20%;
-    background: radial-gradient(ellipse at 40% 50%, rgba(56,189,248,0.07) 0%, transparent 65%),
-                radial-gradient(ellipse at 75% 60%, rgba(52,211,153,0.05) 0%, transparent 55%);
-    pointer-events: none; z-index: 0;
-  }
-  [data-theme="light"] .hero::before {
-    content: '';
-    position: absolute;
-    top: -120px; left: 10%; right: 10%; bottom: 20%;
-    background: radial-gradient(ellipse at 40% 50%, rgba(37,99,235,0.04) 0%, transparent 65%),
-                radial-gradient(ellipse at 75% 60%, rgba(16,185,129,0.03) 0%, transparent 55%);
-    pointer-events: none; z-index: 0;
   }
   .hero-text { max-width: 580px; position: relative; z-index: 1; }
 
@@ -588,6 +596,29 @@
   font-size: 0.75rem;
   color: var(--text-mid);
 }
+.contact-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card-hi);
+  color: var(--text-mid);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
+}
+.contact-btn:hover {
+  background: var(--accent-dim);
+  border-color: rgba(56,189,248,0.3);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
 
 
   /* ─────────────────────────────────────
@@ -735,7 +766,7 @@
   </div>
   <div class="hero-avatar">
     <div class="avatar-wrap">
-      <img src="assets/kiran-daware.jpg" alt="Kiran Daware">
+      <img src="assets/kiran-daware.jpg" alt="Kiran Daware" loading="lazy">
     </div>
   </div>
 </section>
@@ -770,6 +801,7 @@
         <div class="skill-divider-label">Tools</div>
         <div class="skill-tags">
           <span class="tag">SIPp</span>
+          <span class="tag">easySIPp</span>
           <span class="tag">Wireshark</span>
           <span class="tag">Cisco Packet Tracer</span>
         </div>
@@ -794,15 +826,15 @@
 
         <div class="badges-row reveal">
           <a href="https://learn.microsoft.com/api/credentials/share/en-in/KiranDaware-6060/5ECAB6CD1444E5C3?sharingId=9755168848E13420" class="badge-link" target="_blank" rel="noopener">
-            <img src="assets/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals">
+            <img src="assets/microsoft-certified-fundamentals-badge.png" alt="Azure Fundamentals" loading="lazy">
             <span>Azure Fundamentals</span>
           </a>
           <a href="https://www.credly.com/badges/fdfb54d8-e0c4-40a6-8ba0-1a679b74a839/public_url" class="badge-link" target="_blank" rel="noopener">
-            <img src="assets/aws-knowledge-cloud-essentials.png" alt="AWS Cloud Essentials">
+            <img src="assets/aws-knowledge-cloud-essentials.png" alt="AWS Cloud Essentials" loading="lazy">
             <span>AWS Cloud Essentials</span>
           </a>
           <a href="https://www.credly.com/badges/caffe636-58f1-4b2d-880a-92d6acd4a40a/public_url" class="badge-link" target="_blank" rel="noopener">
-            <img src="assets/network-support-and-security.png" alt="Network &amp; Security">
+            <img src="assets/network-support-and-security.png" alt="Network &amp; Security" loading="lazy">
             <span>Network &amp; Security</span>
           </a>
         </div>
@@ -879,7 +911,7 @@
         </div>
       </div>
       <div class="project-image">
-        <img src="/assets/easySIPp_logo.png" alt="easySIPp logo" style="object-fit:contain; padding: 14px;" />
+        <img src="/assets/easySIPp_logo.png" alt="easySIPp logo" style="object-fit:contain; padding: 14px;" loading="lazy" />
       </div>
     </div>
 
@@ -899,7 +931,7 @@
         </p>
       </div>
       <div class="project-image">
-        <img src="assets/selenium.png" alt="Selenium" style="object-fit:contain; padding: 14px;">
+        <img src="assets/selenium.png" alt="Selenium" style="object-fit:contain; padding: 14px;" loading="lazy">
       </div>
     </div>
 
@@ -929,7 +961,7 @@
         </div>
       </div>
       <div class="project-image">
-        <img src="/assets/electricaleasy_logo.png" alt="electricaleasy logo" style="object-fit:contain; padding: 14px;" />
+        <img src="/assets/electricaleasy_logo.png" alt="electricaleasy logo" style="object-fit:contain; padding: 14px;" loading="lazy" />
       </div>
     </div>
 
@@ -957,6 +989,10 @@
         </div>
         <div class="contact-title">Email</div>
         <div class="contact-value" id="email-display">Click to reveal</div>
+        <div class="contact-actions" id="email-actions" style="display:none;">
+          <button type="button" class="contact-btn" id="copy-email-btn">Copy email</button>
+          <button type="button" class="contact-btn" id="open-email-btn">Open email app</button>
+        </div>
       </div>
 
       <a href="https://www.linkedin.com/in/kiran-daware/" target="_blank" rel="noopener" class="contact-card">
@@ -980,7 +1016,7 @@
 <div class="footer-wrap">
   <footer>
     <div class="footer-left">
-      © 2023–2026 Kiran Daware. All Rights Reserved.
+      © 2023–2026 Kiran Daware. Always learning, always building.
       <span class="footer-note">This website — and its creator — are both a work in progress.</span>
     </div>
     <div class="footer-links">
@@ -988,12 +1024,13 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
+      <a href="https://easysipp.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        easySIPp
+      </a>
       <a href="https://www.electricaleasy.com/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        ElectricalEasy
-      </a>
-      <a href="https://easysipp.com" target="_blank" rel="noopener">
-        easySIPp
+        electricaleasy
       </a>
     </div>
   </footer>
@@ -1072,6 +1109,9 @@
     // Email Protection
   const emailCard = document.getElementById('email-card');
   const emailDisplay = document.getElementById('email-display');
+  const emailActions = document.getElementById('email-actions');
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const openEmailBtn = document.getElementById('open-email-btn');
 
   const reverseStr = (str) => str.split('').reverse().join('');
   // Obfuscated email (reverse it and split it)
@@ -1084,18 +1124,53 @@
 
   let emailRevealed = false;
 
+  function openEmail() {
+    window.location.href = 'mailto:' + fullEmail;
+  }
+
+  function copyEmailToClipboard() {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(displayEmail).then(() => {
+        const originalText = emailDisplay.textContent;
+        emailDisplay.textContent = 'Email copied!';
+        setTimeout(() => {
+          emailDisplay.textContent = originalText;
+        }, 1500);
+      }).catch(() => {
+        // Fallback: keep email visible, user can copy manually
+        emailDisplay.textContent = displayEmail;
+      });
+    } else {
+      // Fallback: keep email visible, user can copy manually
+      emailDisplay.textContent = displayEmail;
+    }
+  }
+
   emailCard.addEventListener('click', () => {
     if (!emailRevealed) {
       emailDisplay.textContent = displayEmail;
       emailRevealed = true;
-      // Make it clickable after reveal
-      setTimeout(() => {
-        window.location.href = 'mailto:' + fullEmail;
-      }, 300);
+      if (emailActions) {
+        emailActions.style.display = 'flex';
+      }
     } else {
-      window.location.href = 'mailto:' + fullEmail;
+      openEmail();
     }
   });
+
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      copyEmailToClipboard();
+    });
+  }
+
+  if (openEmailBtn) {
+    openEmailBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openEmail();
+    });
+  }
 
 </script>
 </body>
